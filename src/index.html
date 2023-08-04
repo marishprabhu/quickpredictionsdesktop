@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>QuickPredictions</title>
+    <link rel="stylesheet" href="index.css" />
+    <script type="text/javascript">
+
+      function retry() {
+        if (checkOnlineStatus) {
+          window.open("https://www.quickpredictions.com","_self");
+        }
+      }
+
+      const checkOnlineStatus = async () => {
+        try {
+          const online = await fetch("https://ipv4.icanhazip.com/");
+          return online.status >= 200 && online.status < 300; // either true or false
+        } catch (err) {
+          return false; // definitely offline
+        }
+    };
+    </script>
+  </head>
+  <body>
+    <image src="../build/icon.png" height="200" width="200" />
+    <h1>An active internet connection is required.</h1>
+    <p>Please check your network settings.</p>
+    <button class="button" onclick="retry()">RETRY</button>
+  </body>
+</html>
