@@ -2,7 +2,7 @@
   "name": "QuickPredictions",
   "productName": "Quick Predictions",
   "version": "1.0.0",
-  "description": "Free Astrology software useful to create horoscope along with Marriage Matching, Jamakkol and much more astrological services.",
+  "description": "Astrology software to create Horoscope, Check Marriage Matching, Jamakkol and much more astrological services.",
   "main": "src/index.js",
   "build": {
     "win": {
